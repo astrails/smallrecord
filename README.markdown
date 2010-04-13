@@ -3,7 +3,7 @@ SmallRecord
 
 Simple Object persistency library for Cassandra
 
-Home: [http://astrails.com/small-record](http://astrails.com/small-record)
+Home: [http://astrails.com/smallrecord](http://astrails.com/smallrecord)
 
 Status
 ------
