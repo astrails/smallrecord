@@ -1,7 +1,7 @@
 SmallRecord
 ===========
 
-Simple Object persistency library for Cassandra
+Simple Object persistency library for [Cassandra](http://cassandra.apache.org/)
 
 Home: [http://astrails.com/smallrecord](http://astrails.com/smallrecord)
 
@@ -280,3 +280,7 @@ There are a couple of things that I want to fix first:
 * Need to research the possibility of merging with CassandraObject. Thought I'm not sure this
   is practical.
 
+Copyright
+---------
+
+Copyright (c) 2010 Astrails Ltd. See LICENSE for details.
