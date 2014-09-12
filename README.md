@@ -153,7 +153,7 @@ You define your models the usual way:
 What is different from the ActiveRecord is that you have to tell SmallRecord
 about all your attributes since it can't infer it from the database schema like
 ActiveModel does. There is no database schema duh!  The attributes support
-mostly came form CassandraObject but changed quite a bit since then. One day
+mostly came from CassandraObject but changed quite a bit since then. One day
 I'll document the differences :)
 
     class User < SmallRecord::Base
