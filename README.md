@@ -124,12 +124,12 @@ SmallRecord will look for the file config/small\_record.yml :
     test:
       adapter: mock
 
-Notice the :mock adapter. This is just a simple
+Notice the `:mock` adapter. This is just a simple
 Cassandra emulation using in-memory ruby hash. This is what I'm using
 for development and testing. It doesn't require cassandra running.
 The emulation is not 100% off course but it does the job. And I didn't
 yet have any bugs related to the difference b/w the mock and the real thing.
-Just remember that if you run develoment server with mock all the data will be gone
+Just remember that if you run development server with mock all the data will be gone
 once you restart. But that is probably not such a bad thing for development. Or
 it is. You decide.
 
