@@ -143,7 +143,7 @@ You define your models the usual way:
       ...
     end
 
-    user = User.new :foo => "bar"
+    user = User.new foo: 'bar'
     user.save
     User.find(user.id)
     User.first
@@ -158,8 +158,8 @@ I'll document the differences :)
 
     class User < SmallRecord::Base
       attribute :name
-      attribute :age, :type => :integer
-      attribute :create_at, :type => :time
+      attribute :age, type: :integer
+      attribute :create_at, type: :time
     end
 
 ### ActiveModel
@@ -200,7 +200,7 @@ You can also define your own callbacks:
 
     >> user.changed
     => []
-    >> user.name = "foo"
+    >> user.name = 'foo'
     => "foo"
     >> user.changed
     => ["name"]
@@ -211,7 +211,7 @@ When saving an object it will only save changed attributes:
 
     >> user.save
     => true
-    >> user.name = "qwe"
+    >> user.name = 'qwe'
     => "qwe"
     >> user.save
       User Insert (0.000043)   insert(aa421ea0-c407-46fe-986f-09b2d749b1be, {"attributes"=>{"name"=>"\"qwe\"", "schema_version"=>"0"}}, {})
