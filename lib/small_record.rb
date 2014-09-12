@@ -1,6 +1,4 @@
 $: <<
-File.expand_path("../../vendor/activesupport/lib", __FILE__) <<
-File.expand_path("../../vendor/activemodel/lib", __FILE__)
 require 'i18n'
 require 'activesupport'
 require 'activemodel'
