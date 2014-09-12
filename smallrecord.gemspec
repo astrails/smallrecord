@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require "small_record/version"
 
 Gem::Specification.new do |s|
-  s.name        = 'SmallRecord'
+  s.name        = 'smallrecord'
   s.version     = SmallRecord::VERSION
   s.platform    = Gem::Platform::RUBY
   s.date        = File.new("lib/small_record/version.rb").ctime
