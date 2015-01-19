@@ -124,12 +124,12 @@ SmallRecord will look for the file config/small\_record.yml :
     test:
       adapter: mock
 
-Notice the :mock adapter. This is just a simple
+Notice the `:mock` adapter. This is just a simple
 Cassandra emulation using in-memory ruby hash. This is what I'm using
 for development and testing. It doesn't require cassandra running.
 The emulation is not 100% off course but it does the job. And I didn't
 yet have any bugs related to the difference b/w the mock and the real thing.
-Just remember that if you run develoment server with mock all the data will be gone
+Just remember that if you run development server with mock all the data will be gone
 once you restart. But that is probably not such a bad thing for development. Or
 it is. You decide.
 
@@ -143,7 +143,7 @@ You define your models the usual way:
       ...
     end
 
-    user = User.new :foo => "bar"
+    user = User.new foo: 'bar'
     user.save
     User.find(user.id)
     User.first
@@ -153,13 +153,13 @@ You define your models the usual way:
 What is different from the ActiveRecord is that you have to tell SmallRecord
 about all your attributes since it can't infer it from the database schema like
 ActiveModel does. There is no database schema duh!  The attributes support
-mostly came form CassandraObject but changed quite a bit since then. One day
+mostly came from CassandraObject but changed quite a bit since then. One day
 I'll document the differences :)
 
     class User < SmallRecord::Base
       attribute :name
-      attribute :age, :type => :integer
-      attribute :create_at, :type => :time
+      attribute :age, type: :integer
+      attribute :create_at, type: :time
     end
 
 ### ActiveModel
@@ -200,7 +200,7 @@ You can also define your own callbacks:
 
     >> user.changed
     => []
-    >> user.name = "foo"
+    >> user.name = 'foo'
     => "foo"
     >> user.changed
     => ["name"]
@@ -211,7 +211,7 @@ When saving an object it will only save changed attributes:
 
     >> user.save
     => true
-    >> user.name = "qwe"
+    >> user.name = 'qwe'
     => "qwe"
     >> user.save
       User Insert (0.000043)   insert(aa421ea0-c407-46fe-986f-09b2d749b1be, {"attributes"=>{"name"=>"\"qwe\"", "schema_version"=>"0"}}, {})
